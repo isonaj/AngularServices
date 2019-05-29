@@ -1,8 +1,13 @@
 
 <div>
-  <div class="card" *ngFor="let c of cast" (click)="kill(c)">
-    <img [src]="imgSrc(c.img)">
-    <h2>{{c.name}}</h2>
-    <span *ngIf="c.dead">DEAD</span>
+  <button (click)="killAStark()">End Season</button>
+</div>
+<div>
+  <div class="card" *ngFor="let character of cast" (click)="kill(character)">
+    <img [src]="imgSrc(character.img)">
+    <h2 [ngClass]="{dead: character.dead}">{{character.name}}</h2>
+    <div *ngIf="character.dead" class="inner-card">
+      <div class="dead-text">DEAD</div>
+    </div>
   </div>
 </div>
