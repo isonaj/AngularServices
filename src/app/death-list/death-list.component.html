@@ -1,0 +1,8 @@
+
+<div>
+  <div class="card" *ngFor="let c of cast" (click)="kill(c)">
+    <img [src]="imgSrc(c.img)">
+    <h2>{{c.name}}</h2>
+    <span *ngIf="c.dead">DEAD</span>
+  </div>
+</div>

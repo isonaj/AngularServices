@@ -1,5 +1,8 @@
 # AngularServices
 
+A basic project for demonstrating the basics of Angular Services.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 ## Development server
