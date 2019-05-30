@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DeathListComponent } from './death-list/death-list.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { GotService } from './services/got.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GotService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
