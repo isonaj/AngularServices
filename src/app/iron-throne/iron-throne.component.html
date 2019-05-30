@@ -1,3 +1,4 @@
-<p>
-  iron-throne works!
-</p>
+<div *ngIf="!!king?.name">
+  <h2>Long live {{king.name}}!</h2>
+  <img [src]='"https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/" + king.img + "-512x512.jpg"'>
+</div>
