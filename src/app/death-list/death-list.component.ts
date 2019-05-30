@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-death-list',
@@ -23,9 +24,11 @@ export class DeathListComponent implements OnInit {
     { name: "Bran Stark", img: "bran-stark" },
     { name: "Rickon Stark", img: "rickon-stark" },
   ]
-  constructor() { }
+  constructor(private client: HttpClient) { }
 
   ngOnInit() {
+    this.client.get('https://angularservicesapi.azurewebsites.net/api/cast')
+      .subscribe(data => this.cast = <any>data);
   }
 
   kill(character) {
