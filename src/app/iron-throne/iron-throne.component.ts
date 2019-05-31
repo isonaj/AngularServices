@@ -1,7 +1,6 @@
 import { GotService } from './../services/got.service';
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap} from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-iron-throne',
@@ -14,13 +13,12 @@ export class IronThroneComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private gotService: GotService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
 
-    this.gotService.getCastById(id)
+    this.gotService.getById(+id)
       .subscribe(c => this.king = c);
   }
 
