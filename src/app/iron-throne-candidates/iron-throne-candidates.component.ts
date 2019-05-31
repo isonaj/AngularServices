@@ -13,7 +13,7 @@ export class IronThroneCandidatesComponent implements OnInit {
   constructor(private gotService: GotService) { }
 
   ngOnInit() {
-    this.gotService.getCast()
+    this.gotService.getAll()
       .subscribe(data => this.cast = data as any[]);
   }
 }
