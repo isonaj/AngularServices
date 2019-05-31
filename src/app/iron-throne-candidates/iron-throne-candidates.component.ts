@@ -1,3 +1,4 @@
+import { Character } from './../character';
 import { GotService } from './../services/got.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IronThroneCandidatesComponent implements OnInit {
 
-  cast: any[];
+  cast: Character[];
 
   constructor(private gotService: GotService) { }
 
   ngOnInit() {
     this.gotService.getAll()
-      .subscribe(data => this.cast = data as any[]);
+      .subscribe(data => this.cast = data);
   }
 }
