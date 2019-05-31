@@ -1,6 +1,7 @@
 
 <div>
   <button (click)="killAStark()">End Season</button>
+  <button (click)="resetData()">Reset Data</button>
 </div>
 <div>
   <div class="card" *ngFor="let character of cast" (click)="kill(character)">

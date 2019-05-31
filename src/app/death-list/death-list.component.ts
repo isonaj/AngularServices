@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CastService } from '../services/cast.service';
 
 @Component({
   selector: 'app-death-list',
@@ -24,15 +25,20 @@ export class DeathListComponent implements OnInit {
     { name: "Bran Stark", img: "bran-stark" },
     { name: "Rickon Stark", img: "rickon-stark" },
   ]
-  constructor(private client: HttpClient) { }
+  constructor(private svc: CastService) { }
 
   ngOnInit() {
-    this.client.get('https://angularservicesapi.azurewebsites.net/api/cast')
-      .subscribe(data => this.cast = <any>data);
+    this.cast = this.svc.cast;
+    this.svc.getAll();
   }
 
   kill(character) {
-    character.dead = true;
+    this.svc.killCharacter(character.id);
+    //character.dead = true;
+  }
+
+  resetData() {
+    this.svc.resetData();
   }
   
   imgSrc(img) {
