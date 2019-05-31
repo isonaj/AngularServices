@@ -1,3 +1,4 @@
+import { Character } from './../character';
 import { GotService } from './../services/got.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class IronThroneComponent implements OnInit {
 
-  king: any = null;
+  king: Character = null;
 
   constructor(
     private route: ActivatedRoute,
