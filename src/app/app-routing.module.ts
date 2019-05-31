@@ -1,4 +1,3 @@
-import { DemoTestComponent } from './demo-test/demo-test.component';
 import { IronThroneComponent } from './iron-throne/iron-throne.component';
 import { IronThroneCandidatesComponent } from './iron-throne-candidates/iron-throne-candidates.component';
 import { NgModule } from '@angular/core';
