@@ -1,4 +1,8 @@
 <div *ngIf="!!king?.name">
   <h2>Long live {{king.name}}!</h2>
-  <img [src]='"https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/" + king.img + "-512x512.jpg"'>
+
+  <div class="card">
+    <img class="throne" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/9989e4b3-5e20-4d49-8c7a-0a6834aa0f42/d7wlw11-cc00af93-4ca2-40da-82ee-700fbe1feccf.png/v1/fill/w_1091,h_733,strp/game_of__thrones___the_iron_throne_png_by_wishfulrose_d7wlw11-pre.png" />
+    <img class="cast" [src]='"https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/" + king.img + "-512x512.jpg"'>
+  </div>
 </div>

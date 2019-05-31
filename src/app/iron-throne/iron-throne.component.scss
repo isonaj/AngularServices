@@ -1,0 +1,21 @@
+div.card {
+  display: inline-block;
+  width: 200px;
+  position: absolute;
+  margin-top: -60px;
+  margin-left: -120px;
+
+  img.cast {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin-left: 240px;
+      margin-top: 170px;
+  }
+
+  img.throne {
+      position: absolute;
+      height: 400px;
+  }
+}
