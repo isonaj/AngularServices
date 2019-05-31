@@ -45,6 +45,7 @@ export class DeathListComponent implements OnInit {
     return `https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/${img}-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg`;
   }
 
+  
   killAStark() {
     var starks = this.cast.filter(char => char.name.indexOf("Stark") >= 0 && !(<any>char).dead);
     if (starks.length > 0) {
