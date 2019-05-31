@@ -2,7 +2,7 @@
   <h2>Who will sit on the Iron Throne!</h2>
 
   <div class="card" *ngFor="let character of cast">
-    <a [routerLink]="['/iron-throne', character.id]">
+    <a>
       <img [src]='"https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/" + character.img + "-512x512.jpg"'>
     </a>
   </div>
