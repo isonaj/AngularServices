@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: DeathListComponent },
   { path: 'about', component: AboutComponent },
   { path: 'iron-throne-candidates', component: IronThroneCandidatesComponent },
-  { path: 'iron-throne/:id', component: IronThroneComponent }
+  // { path: 'iron-throne/:id', component: IronThroneComponent }
 ];
 
 @NgModule({

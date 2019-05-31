@@ -17,7 +17,8 @@ export class IronThroneComponent implements OnInit {
     private gotService: GotService) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
+    // const id = this.route.snapshot.paramMap.get('id');
+    const id = 1;
 
     this.gotService.getById(+id)
       .subscribe(c => this.king = c);
