@@ -21,10 +21,10 @@ export class CastService {
     return this.cast;
   }
 
-  killCharacter(id: number) {
-    this.client.post('https://angularservicesapi.azurewebsites.net/api/cast/' + id + '/kill', null)
+  kill(character: Character) {
+    this.client.post('https://angularservicesapi.azurewebsites.net/api/cast/' + character.id + '/kill', null)
       .subscribe(x => {
-        this.getById(id).dead = true;
+        this.getById(character.id).dead = true;
       });
   }
 

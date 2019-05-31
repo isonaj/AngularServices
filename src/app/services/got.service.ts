@@ -10,16 +10,16 @@ export class GotService {
 
   constructor(private client: HttpClient) { }
 
-  getCast(): Observable<Character[]> {
+  getAll(): Observable<Character[]> {
     return this.client.get<Character[]>('https://angularservicesapi.azurewebsites.net/api/cast');
   }
 
-  getCastById(id: number | any): Observable<Character> {
+  getById(id: number): Observable<Character> {
     return this.client.get<Character>(`https://angularservicesapi.azurewebsites.net/api/cast/${id}`);
   }
 
-  killCharacter(id: number): Observable<any> {
-    return this.client.post('https://angularservicesapi.azurewebsites.net/api/cast/' + id + '/kill', null);
+  kill(character: Character): Observable<any> {
+    return this.client.post(`https://angularservicesapi.azurewebsites.net/api/cast/${character.id}/kill`, null);
   }
 
   resetData(): Observable<any> {

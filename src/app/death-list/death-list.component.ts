@@ -24,18 +24,26 @@ export class DeathListComponent implements OnInit {
     { name: "Arya Stark", img: "arya-stark" },
     { name: "Bran Stark", img: "bran-stark" },
     { name: "Rickon Stark", img: "rickon-stark" },
-  ]
+  ];
+
   constructor(private svc: CastService) { }
 
   ngOnInit() {
-    this.cast = this.svc.cast;
-    this.svc.getAll();
+    this.cast = this.svc.getAll();
   }
 
   kill(character) {
-    this.svc.killCharacter(character.id);
+    this.svc.kill(character);
     //character.dead = true;
   }
+
+
+
+
+
+
+
+
 
   resetData() {
     this.svc.resetData();
@@ -45,7 +53,6 @@ export class DeathListComponent implements OnInit {
     return `https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/character/s5/${img}-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg`;
   }
 
-  
   killAStark() {
     var starks = this.cast.filter(char => char.name.indexOf("Stark") >= 0 && !(<any>char).dead);
     if (starks.length > 0) {
