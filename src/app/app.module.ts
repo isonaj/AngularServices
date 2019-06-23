@@ -8,13 +8,15 @@ import { GotService } from './services/got.service';
 import { IronThroneCandidatesComponent } from './iron-throne-candidates/iron-throne-candidates.component';
 import { IronThroneComponent } from './iron-throne/iron-throne.component';
 import { HomeComponent } from './home/home.component';
+import { DemocracyComponent } from './democracy/democracy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     IronThroneCandidatesComponent,
-    IronThroneComponent
+    IronThroneComponent,
+    DemocracyComponent
   ],
   imports: [
     BrowserModule,
